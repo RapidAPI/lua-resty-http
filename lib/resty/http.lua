@@ -1101,9 +1101,9 @@ function _M.connect_proxy(self, proxy_uri, scheme, host, port, proxy_authorizati
     -- Check that the scheme is http (https is not supported for
     -- connections between the client and the proxy)
     local proxy_scheme = parsed_proxy_uri[1]
-    if proxy_scheme ~= "http" then
-        return nil, "protocol " .. proxy_scheme .. " not supported for proxy connections"
-    end
+    -- if proxy_scheme ~= "http" then
+        -- return nil, "protocol " .. proxy_scheme .. " not supported for proxy connections"
+    -- end
 
     -- Make the connection to the given proxy
     local proxy_host, proxy_port = parsed_proxy_uri[2], parsed_proxy_uri[3]
